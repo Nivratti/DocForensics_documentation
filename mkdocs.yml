@@ -14,6 +14,8 @@ nav:
     - User Guide: user_guide.md
     - Input Image Requirements: input_image_requirements.md
     - Features: features.md
+    - API Documentation: api_documentation.md
+    - Release Notes: release_notes.md
 
 markdown_extensions:
   - pymdownx.highlight:
