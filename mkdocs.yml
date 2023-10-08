@@ -4,9 +4,21 @@ site_author: Nivratti Boyane
 
 theme:
   name: material
-
+  features:
+    - content.code.copy
+    - content.code.annotate
+    
 nav:
     - Home: index.md
     - Getting Started: getting_started.md
     # - User Guide: user_guide.md
     # - Input Image Requirements: input_image_requirements.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
