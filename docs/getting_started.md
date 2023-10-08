@@ -2,7 +2,7 @@
 
 This page will guide you through the initial setup and installation process to get the Document Forensics Project up and running on your machine.
 
-## Prerequisites
+## Prerequisites:
 
 Before proceeding with the installation, ensure you have the following prerequisites met on your machine:
 
@@ -29,7 +29,7 @@ Before proceeding with the installation, ensure you have the following prerequis
 Ensure that your machine meets the above specifications to ensure smooth operation of the Document Forensics Project.
 
 
-## Installation Guide
+## Installation Guide:
 
 This guide provides detailed instructions on how to set up the Document Forensics Project on your machine. You can choose to set up the project on a CPU or a GPU, though a GPU setup is recommended due to its advantages in speeding up predictions.
 
@@ -41,7 +41,7 @@ This guide provides detailed instructions on how to set up the Document Forensic
    cd DocForensics_Mauritius_Inference
    ```
 
-### GPU Setup (Recommended)
+### GPU Setup (Recommended):
 
 There are three distinct methods available for setting up the project on a GPU: Docker, Docker Compose, and using the `setup.sh` script. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
 
@@ -148,7 +148,7 @@ These steps outline the process to set up the Document Forensics Project on a GP
 In this section, a step-by-step procedure is provided to set up the Document Forensics Project on a GPU using the `setup.sh` script. It includes making the script executable, running it, activating the newly created Conda environment, starting the project, and how to access, stop, and deactivate the environment post usage.
 
 
-### CPU Setup
+### CPU Setup:
 
 There are three distinct methods available for setting up the project on a CPU: Docker, Docker Compose, and using the `setup_cpu.sh` script. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
 
@@ -255,3 +255,10 @@ The `setup_cpu.sh` script is a straightforward method to set up the Document For
     ```
 
 These steps outline the process to set up the Document Forensics Project on a CPU using the `setup_cpu.sh` script. This method requires Anaconda to be installed on the system, as it relies on Conda environments to manage dependencies.
+
+
+## Initial Configuration:
+
+No initial configuration is required to get started with the Document Forensics Project. Once the installation steps are completed, you can begin using the system to analyze digital documents for forensic purposes.
+
+Feel free to explore the project documentation further to understand the various features and functionalities available within the Document Forensics Project.
