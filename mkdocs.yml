@@ -16,6 +16,7 @@ nav:
     - Features: features.md
     - API Documentation: api_documentation.md
     - Dataset Composition: dataset_composition.md
+    - Understanding Document Forensics Workflow: understanding_document_forensics_workflow.md
     - Release Notes: release_notes.md
 
 markdown_extensions:
