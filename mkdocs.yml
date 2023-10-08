@@ -1,0 +1,6 @@
+site_name: DocForensics
+site_description: Document Forensics Solution Documentation
+site_author: Nivratti Boyane
+
+theme:
+  name: material
