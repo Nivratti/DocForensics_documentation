@@ -15,6 +15,7 @@ nav:
     - Input Image Requirements: input_image_requirements.md
     - Features: features.md
     - API Documentation: api_documentation.md
+    - Dataset Composition: dataset_composition.md
     - Release Notes: release_notes.md
 
 markdown_extensions:
