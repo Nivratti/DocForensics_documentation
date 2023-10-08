@@ -2,7 +2,7 @@
 
 DocForensics is a cutting-edge solution designed to localize and identify various forms of document tampering and malicious alterations. Our solution aids in unveiling copy-move, splicing, erasing, and text redaction attacks, providing a reliable foundation for digital document verification and integrity assurance.
 
-![Document Forensic Solution Illustration](assets/images/dfs-illustration.png)
+![Document Forensic Solution Illustration](assets/images/dfs-illustration.jpg)
 
 ## Key Features
 
