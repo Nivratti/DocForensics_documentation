@@ -1,0 +1,515 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Document Forensics Solution Documentation">
+      
+      
+        <meta name="author" content="Nivratti Boyane">
+      
+      
+      
+        <link rel="prev" href="../understanding_document_forensics_workflow/">
+      
+      
+        <link rel="next" href="../release_notes/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Challenges - DocForensics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DocForensics" class="md-header__button md-logo" aria-label="DocForensics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DocForensics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Challenges
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DocForensics" class="md-nav__button md-logo" aria-label="DocForensics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DocForensics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_image_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Image Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_composition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Composition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understanding_document_forensics_workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Document Forensics Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Challenges</h1>
+
+<p>Document image forensics is a challenging field due to the nuances of document manipulations and the advancement of forgery techniques. Some of the primary challenges faced in this area include:</p>
+<ol>
+<li>
+<p><strong>Sophisticated Editing Tools:</strong> Modern software provides advanced tools that make manipulations seamless, making detection difficult.</p>
+</li>
+<li>
+<p><strong>Variability of Documents:</strong> Different documents have varying layouts, styles, fonts, and formats, which adds to the complexity of forgery detection.</p>
+</li>
+<li>
+<p><strong>High-Quality Reproductions:</strong> With advancements in printing and scanning technologies, forgers can produce high-quality replicas of original documents.</p>
+</li>
+<li>
+<p><strong>Loss of Image Quality:</strong> Multiple generations of copying, rescanning, and compressing can degrade the image, obscuring traces of manipulation.</p>
+</li>
+<li>
+<p><strong>Source Camera Identification:</strong> For digital photos of documents, identifying the source camera can be challenging, especially if metadata is tampered with.</p>
+</li>
+<li>
+<p><strong>Machine Learning and AI:</strong> Advanced algorithms can now generate synthetic images or tamper with existing ones in a way that's hard for traditional methods to detect.</p>
+</li>
+<li>
+<p><strong>Digital vs. Physical Tampering:</strong> Differentiating between tampering done on a physical document before scanning versus manipulation of the digital image after scanning can be difficult.</p>
+</li>
+<li>
+<p><strong>Consistency Checking:</strong> Determining the consistency of light, shadows, and perspectives requires a detailed understanding of the document's original environment.</p>
+</li>
+<li>
+<p><strong>Scale and Complexity:</strong> Automated solutions must process a vast number of documents rapidly, yet many forensic techniques can be computationally intensive.</p>
+</li>
+<li>
+<p><strong>Lack of Ground Truth:</strong> For training detection models or validating methods, there is often a lack of a comprehensive dataset of forged documents with ground truth annotations.</p>
+</li>
+<li>
+<p><strong>Global Variability:</strong> Official documents, like passports or IDs, vary significantly from one country or institution to another, making standardized verification challenging.</p>
+</li>
+<li>
+<p><strong>Evolution of Forgery Techniques:</strong> As forensic methods improve, so do forgery techniques, leading to an ongoing cat-and-mouse game.</p>
+</li>
+<li>
+<p><strong>Lack of Standardization:</strong> There isn't always a standardized procedure or benchmark for different forensic tasks, leading to variations in performance evaluations.</p>
+</li>
+<li>
+<p><strong>Ethical and Privacy Concerns:</strong> In the age of data privacy, accessing or storing certain document details for forensic purposes can raise ethical and legal concerns.</p>
+</li>
+<li>
+<p><strong>Loss of Integrity:</strong></p>
+<ul>
+<li>Natural Aging: Caused by the natural aging of the document over time.</li>
+<li>Fading of Ink: Due to exposure to light, age, or chemical interactions.</li>
+<li>Degradation of Paper: Resulting from environmental conditions or poor-quality materials.</li>
+<li>Detection Difficulty: Reduced clarity and faded features in worn-out documents.</li>
+<li>Digital Restoration Artifacts: Digital enhancement efforts can unintentionally introduce or hide important details.</li>
+<li>Advanced Imaging Challenges: The need for specialized imaging methods to discern faded or hidden details.</li>
+<li>Variable Degradation: Different sections of the document may degrade at varied rates, affecting uniformity.</li>
+<li>Background Interference: Grain, patterns, or imperfections in paper can overshadow key content.</li>
+<li>Chemical Alterations: Age or environmental factors can change the chemical properties of ink or paper.</li>
+<li>Environmental Damage: Including water/moisture damage causing smudging and ink bleed, and burn/heat damage leading to charing or warping.</li>
+<li>Fragmentation Issues: Missing pieces or fragments from torn documents.</li>
+<li>False Positives: Natural wear and tear, or other benign changes, can sometimes resemble tampering or alterations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Document Image Quality:</strong></p>
+<ul>
+<li>Resolution: The clarity of the document, determining how well details can be seen. Low resolution might omit important details.  </li>
+<li>Noise: Random variations in brightness or color information. High noise levels can mask fine details and introduce unwanted artifacts.</li>
+<li>Compression Artifacts: Unwanted patterns or detail degradation resulting from image compression, especially noticeable with aggressive lossy compression.</li>
+<li>Sharpness: The clarity of edges and details. Blurred images might hide alterations or make genuine details appear altered.</li>
+<li>Brightness and Contrast Variations: Uneven or incorrect brightness and contrast levels can lead to distorted colors or exaggerated details.</li>
+<li>Moire Patterns: Unwanted patterns that arise when scanning printed materials, interfering with the original content of the document.</li>
+<li>Distortions: Any warping, stretching, or perspective changes that alter the original appearance of the document.</li>
+<li>Background Noise: Extraneous information or artifacts that can obscure the genuine content of the document.</li>
+<li>Non-uniform Illumination: Shadows, highlights, or uneven lighting conditions that can distort the appearance of a document.</li>
+<li>Scanner/Camera Quality: The fidelity with which a capture device reproduces the document. Low-quality devices may not capture details accurately.</li>
+<li>Environmental Factors: Issues like glare, reflections, and other environmental elements that can impact the quality during document capture.</li>
+</ul>
+</li>
+</ol>
+<p>To overcome these challenges, ongoing research, collaboration, and continuous tool development are crucial. The integration of machine learning and traditional forensic techniques is also an exciting avenue, leading to improved detection rates and faster processing.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

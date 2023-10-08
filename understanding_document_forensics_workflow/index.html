@@ -13,20 +13,22 @@
       
       
       
+        <link rel="prev" href="../dataset_composition/">
       
-        <link rel="next" href="getting_started/">
+      
+        <link rel="next" href="../challenges/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
     
     
       
-        <title>DocForensics</title>
+        <title>Understanding Document Forensics Workflow - DocForensics</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bd3936ea.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
       
       
 
@@ -45,14 +47,14 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -63,7 +65,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-docforensics" class="md-skip">
+        <a href="#how-the-solution-classifies-an-image" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="DocForensics" class="md-header__button md-logo" aria-label="DocForensics" data-md-component="logo">
+    <a href=".." title="DocForensics" class="md-header__button md-logo" aria-label="DocForensics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Understanding Document Forensics Workflow
             
           </span>
         </div>
@@ -149,7 +151,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="DocForensics" class="md-nav__button md-logo" aria-label="DocForensics" data-md-component="logo">
+    <a href=".." title="DocForensics" class="md-nav__button md-logo" aria-label="DocForensics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -164,29 +166,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -195,47 +177,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    Key Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-choose-document-forensic-solution" class="md-nav__link">
-    Why Choose Document Forensic Solution?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -246,7 +187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/" class="md-nav__link">
+      <a href="../getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -265,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/" class="md-nav__link">
+      <a href="../user_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,7 +225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="input_image_requirements/" class="md-nav__link">
+      <a href="../input_image_requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -303,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="features/" class="md-nav__link">
+      <a href="../features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -322,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api_documentation/" class="md-nav__link">
+      <a href="../api_documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -341,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dataset_composition/" class="md-nav__link">
+      <a href="../dataset_composition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,9 +299,27 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="understanding_document_forensics_workflow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Understanding Document Forensics Workflow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -369,6 +328,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-solution-classifies-an-image" class="md-nav__link">
+    How the Solution Classifies an Image:
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Solution Classifies an Image:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -379,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="challenges/" class="md-nav__link">
+      <a href="../challenges/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="release_notes/" class="md-nav__link">
+      <a href="../release_notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,8 +425,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -438,23 +433,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    Key Features
+  <a href="#how-the-solution-classifies-an-image" class="md-nav__link">
+    How the Solution Classifies an Image:
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Solution Classifies an Image:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#why-choose-document-forensic-solution" class="md-nav__link">
-    Why Choose Document Forensic Solution?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -473,27 +467,51 @@
                   
 
 
-<h1 id="welcome-to-docforensics">Welcome to DocForensics</h1>
-<p>DocForensics is a cutting-edge solution designed to localize and identify various forms of document tampering and malicious alterations. Our solution aids in unveiling copy-move, splicing, erasing, and text redaction attacks, providing a reliable foundation for digital document verification and integrity assurance.</p>
-<p><a class="glightbox" href="assets/images/dfs-illustration.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Document Forensic Solution Illustration" src="assets/images/dfs-illustration.jpg" /></a></p>
-<h2 id="key-features">Key Features</h2>
+  <h1>Understanding Document Forensics Workflow</h1>
+
+<h2 id="how-the-solution-classifies-an-image">How the Solution Classifies an Image:</h2>
+<p>The solution employs a trained model to identify the forgery regions within an image. These regions are illustrated in a mask, with white representing forged pixels and black denoting untouched pixels. The extent of white pixels serves as a basis to categorize an image as original, suspicious, or tampered.</p>
+<h3 id="steps">Steps:</h3>
+<ol>
+<li>
+<p><strong>Image Preparation</strong>:</p>
 <ul>
-<li><strong>Copy-Move Detection:</strong> Identify and localize instances of copy-move forgery within digital documents.</li>
-<li><strong>Splicing Detection:</strong> Detect splicing attacks aimed at merging content from different sources.</li>
-<li><strong>Erasing Detection:</strong> Uncover erasing attempts to remove original content from documents.</li>
-<li><strong>Masking Detection:</strong> Identify areas within an image or document where a solid or patterned overlay has been applied to conceal underlying content, such as in text redaction or image obscuration.</li>
-<li><strong>Inpainting Detection:</strong> Identify and localize instances where missing or altered areas within a document have been filled in with generated content to create a seamless appearance.</li>
+<li>The image is loaded, resized to a resolution of 512x512 pixels, and all pixel values are normalized to a range of 0 to 1.</li>
 </ul>
-<h2 id="why-choose-document-forensic-solution">Why Choose Document Forensic Solution?</h2>
+</li>
+<li>
+<p><strong>Model Prediction</strong>:</p>
 <ul>
-<li><strong>Accuracy:</strong> Employing advanced machine learning algorithms, DocForensics provides a high degree of accuracy in detecting various document forgery types.</li>
-<li><strong>Speed:</strong> Process documents swiftly to ensure timely forensic analysis.</li>
-<li><strong>User-Friendly Interface:</strong> Easy-to-use UI ensures a smooth user experience, even for individuals with minimal technical expertise.</li>
-<li><strong>Comprehensive Reports:</strong> Generate detailed forensic reports to support legal and compliance requirements.</li>
-<li><strong>Continuous Improvement:</strong> Regular updates and enhancements to keep pace with evolving forgery techniques.</li>
+<li>The trained deep learning model scrutinizes the image and generates a prediction mask in grayscale. This mask accentuates areas where tampering or forgery is presumed to have taken place.</li>
 </ul>
-<h2 id="getting-started">Getting Started</h2>
-<p>Ready to explore the Document Forensic Solution? Head over to the <a href="getting_started/">Getting Started</a> section for installation instructions and initial configuration guidelines.</p>
+</li>
+<li>
+<p>A "mask" in this context is an image of identical dimensions to the input, but instead of displaying the actual content, it unveils the regions (if any) identified as tampered.</p>
+</li>
+<li>
+<p><strong>Mask Processing</strong>:</p>
+<ul>
+<li>To render decisions based on the mask, certain thresholds are applied to transition the grayscale mask to a monochromatic format (black and white). Pixel values below 128 are converted to 0 (indicating black), and pixel values above 128 are converted to 255 (indicating white).</li>
+</ul>
+</li>
+<li>
+<p><strong>Forgery Extent Calculation</strong>:</p>
+<ul>
+<li>The proportion of the mask that is white (symbolic of forgery) is computed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Image Classification</strong>:</p>
+<ul>
+<li><strong>Original</strong>: Classified if nearly no white pixels are present.</li>
+<li><strong>Suspicious</strong>: The image might encompass some regions of forgery, but it's not definitive. If the white pixel percentage ranges between 0 to 0.57%, it will be labeled as suspicious.</li>
+<li><strong>Tampered</strong>: Classified if the percentage of white pixels surpasses the upper threshold, i.e., if white pixels percentage is more than 0.57%.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Note: The thresholds for "Suspicious" and "Tampered" classifications can be adjusted as needed. These thresholds have been established based on the model's performance on Mauritius ID and Pancard images.</p>
+</blockquote>
 
 
 
@@ -532,10 +550,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.94c44541.min.js"></script>
+      <script src="../assets/javascripts/bundle.94c44541.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

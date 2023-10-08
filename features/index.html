@@ -1,0 +1,668 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Document Forensics Solution Documentation">
+      
+      
+        <meta name="author" content="Nivratti Boyane">
+      
+      
+      
+        <link rel="prev" href="../input_image_requirements/">
+      
+      
+        <link rel="next" href="../api_documentation/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Features - DocForensics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#forensic-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DocForensics" class="md-header__button md-logo" aria-label="DocForensics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DocForensics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DocForensics" class="md-nav__button md-logo" aria-label="DocForensics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DocForensics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_image_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Image Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#splicing-detection" class="md-nav__link">
+    Splicing Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-move-detection" class="md-nav__link">
+    Copy-Move Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erasing-detection" class="md-nav__link">
+    Erasing Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#masking-detection" class="md-nav__link">
+    Masking Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inpainting-detection" class="md-nav__link">
+    Inpainting Detection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_composition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Composition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understanding_document_forensics_workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Document Forensics Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#splicing-detection" class="md-nav__link">
+    Splicing Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-move-detection" class="md-nav__link">
+    Copy-Move Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erasing-detection" class="md-nav__link">
+    Erasing Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#masking-detection" class="md-nav__link">
+    Masking Detection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inpainting-detection" class="md-nav__link">
+    Inpainting Detection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="forensic-features">Forensic Features</h1>
+<p>The Document Forensic Project is equipped with several forensic features designed to detect and analyze digital manipulations within documents. Each feature focuses on a particular type of forgery, providing a detailed analysis to help verify the authenticity of digital documents.</p>
+<ul>
+<li><a href="#forensic-features">Forensic Features</a><ul>
+<li><a href="#splicing-detection">Splicing Detection</a></li>
+<li><a href="#copy-move-detection">Copy-Move Detection</a></li>
+<li><a href="#erasing-detection">Erasing Detection</a></li>
+<li><a href="#masking-detection">Masking Detection</a></li>
+<li><a href="#inpainting-detection">Inpainting Detection</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="splicing-detection">Splicing Detection</h3>
+<p>Image splicing (or Compositing) involves cutting a portion of one image and pasting it onto another. In the context of document forgery, it's taking a part of one official document and merging it with another to create a deceptive document.</p>
+<ul>
+<li><strong>Example 1</strong>: Combining the photo from a stolen passport with the details page of a different, valid passport.</li>
+<li>
+<p><strong>Example 2</strong>: Merging the signature from one driving license onto another to make the latter appear genuine.</p>
+</li>
+<li>
+<p><strong>Example 3</strong>: Combining Two Passports:</p>
+<ul>
+<li><strong>Scenario</strong>: A person has an expired passport with a valid visa and a new passport without that visa. They want to use the valid visa from the expired passport while traveling with their new passport.</li>
+<li><strong>Splicing Action</strong>: The forger cuts out the visa page or stamp from the expired passport and pastes it onto a page in the new passport. It's made to look seamless, as if the visa was genuinely issued in the newer passport.</li>
+<li><strong>Real-world Consequence</strong>: This allows the person to travel based on a visa that isn't actually linked to their current passport. If undetected, they can utilize an expired visa as if it were still valid.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example 4</strong>: Merging Different Driving Licenses:</p>
+<ul>
+<li><strong>Scenario</strong>: Someone has a driving license with a bad driving record (e.g., DUIs or major traffic offenses) and acquires another license under a different identity with a clean record. However, they prefer the photo from the original license.</li>
+<li><strong>Splicing Action</strong>: The forger takes the photo from the original license (with the bad record) and splices it onto the new license (with the clean record).</li>
+<li><strong>Real-world Consequence</strong>: The individual can present a license with a clean driving record but with their preferred photo, potentially evading legal consequences or higher insurance rates linked to their actual driving history.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example 5</strong>: Manipulating National ID Expiry Dates:</p>
+<ul>
+<li><strong>Scenario</strong>: Someone's national ID card is about to expire, which could limit certain privileges like voting.</li>
+<li><strong>Splicing Action</strong>: The forger finds someone else's national ID card that has a more distant expiry date, cuts out just the date, and splices it over the expiry date on the original ID.</li>
+<li><strong>Real-world Consequence</strong>: This alteration might allow someone to use an expired ID as if it's still valid, potentially engaging in civic duties or accessing services under false pretenses.</li>
+</ul>
+</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../assets/images/features/splicing-detection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Splicing attack detection" loading="lazy" src="../assets/images/features/splicing-detection.png" /></a>
+  </p>
+<figcaption>Example: The individual's actual face has been substituted with a different face.</figcaption>
+</figure>
+<h3 id="copy-move-detection">Copy-Move Detection</h3>
+<p>Copy-move forgery is a type of manipulation where a part/segment of the document (or image) is copied and pasted into another location within the same document, often to replicate or hide specific elements. Think of it as a digital "cut and paste" within the same image.</p>
+<ul>
+<li><strong>Example 1</strong>: In a passport, copying the holographic emblem and placing it onto a forged version to enhance its perceived authenticity.</li>
+<li>
+<p><strong>Example 2</strong>: Duplicating a legitimate visa stamp on a page of a passport where an expired or rejected visa was previously.</p>
+</li>
+<li>
+<p><strong>Example 3</strong>: Passport Number Manipulation:</p>
+<ul>
+<li><strong>Scenario</strong>: A forger wants to change their passport number to avoid detection or link to past records.</li>
+<li><strong>Copy-Move Action</strong>: The forger copies some digits from the birth date or expiry date sections of their passport and pastes them onto the passport number, thereby altering it.</li>
+<li><strong>Real-world Consequence</strong>: If undetected, the individual might bypass certain checks at immigration or during other verification processes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example 4</strong>: Driver's License Issue Date Alteration:</p>
+<ul>
+<li><strong>Scenario</strong>: A young driver wants to appear as if they've had their driver's license for a longer period than they actually have, possibly to reduce insurance premiums or qualify for jobs requiring longer driving experience.</li>
+<li><strong>Copy-Move Action</strong>: The forger carefully copies digits from the birthdate section or other parts of the driver's license and pastes them over the issue date, making it seem as though the license was issued earlier than it actually was.</li>
+<li><strong>Real-world Consequence</strong>: The person could unlawfully get benefits or positions that require more extended driving experience or a specific age.</li>
+</ul>
+</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../assets/images/features/copy-move-detection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Copy move detection" loading="lazy" src="../assets/images/features/copy-move-detection.png" /></a>
+  </p>
+<figcaption>Example: The individual's face has been copied and pasted to a different location within the same document.
+  </figcaption>
+</figure>
+<h3 id="erasing-detection">Erasing Detection</h3>
+<p>This involves removing certain elements from an image. In the context of digital image editing, erasing would mean removing specific pixels representing an object or detail to either leave a blank space or replace them with a uniform background.</p>
+<ul>
+<li><strong>Example 1</strong>: Removing an expiry date from a driving license and using the background pattern to fill in the space seamlessly.</li>
+<li><strong>Example 2</strong>: Erasing a restriction or endorsement from a driving license and cloning adjacent background areas to cover the alteration.</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../assets/images/features/erasing.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Erasing Detection" loading="lazy" src="../assets/images/features/erasing.png" /></a>
+  </p>
+<figcaption>Example: The ID number and signature have been erased from the document.
+  </figcaption>
+</figure>
+<h3 id="masking-detection">Masking Detection</h3>
+<p>Covering up parts of an image or document with a solid or patterned overlay to hide underlying content.</p>
+<ul>
+<li><strong>Example 1</strong>: To hide a person's Social Security Number (SSN) on a copied version of a national ID, a black box is placed over the number.</li>
+<li><strong>Example 2</strong>: In a publicly released document, portions of the text are covered with redaction bars to prevent specific details from being disclosed.</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../assets/images/features/masking-text-redaction.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Masking Detection" loading="lazy" src="../assets/images/features/masking-text-redaction.png" /></a>
+  </p>
+<figcaption>Example: Text redaction has been applied to the image to conceal significant details.
+  </figcaption>
+</figure>
+<h3 id="inpainting-detection">Inpainting Detection</h3>
+<p>Inpainting is a technique used to fill in missing or removed parts of an image in a way that is visually coherent with the rest of the image. It's more advanced than simple erasing because the goal of inpainting is to make the edited region look natural, as if the object was never there.</p>
+<ul>
+<li><strong>Example</strong>: If someone were to erase a stamp (leaving a blank area), inpainting would involve filling that blank area with content (like background texture and color) that matches the surrounding region of the passport, making it appear as if the stamp was never there.</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../assets/images/features/inpainting.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Inpainting Detection" loading="lazy" src="../assets/images/features/inpainting.png" /></a>
+  </p>
+<figcaption>Example: Details have been erased and subsequently filled with background texture and color utilizing AI, making the alterations appear seamless and undetectable.
+  </figcaption>
+</figure>
+<hr />
+<p>Each forensic feature is meticulously engineered to provide accurate and insightful analysis, aiding in the identification and understanding of digital manipulations within documents. The combination of these features allows for a comprehensive examination of digital documents to ensure their authenticity and integrity.</p>
+<p>For further details or inquiries regarding the forensic features, feel free to contact our support team.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
