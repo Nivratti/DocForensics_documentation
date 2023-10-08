@@ -4,3 +4,9 @@ site_author: Nivratti Boyane
 
 theme:
   name: material
+
+nav:
+    - Home: index.md
+    # - Getting Started: getting_started.md
+    # - User Guide: user_guide.md
+    # - Input Image Requirements: input_image_requirements.md
