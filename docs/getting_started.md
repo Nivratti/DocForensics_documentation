@@ -146,3 +146,112 @@ These steps outline the process to set up the Document Forensics Project on a GP
 ```
 
 In this section, a step-by-step procedure is provided to set up the Document Forensics Project on a GPU using the `setup.sh` script. It includes making the script executable, running it, activating the newly created Conda environment, starting the project, and how to access, stop, and deactivate the environment post usage.
+
+
+### CPU Setup
+
+There are three distinct methods available for setting up the project on a CPU: Docker, Docker Compose, and using the `setup_cpu.sh` script. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
+
+- i) [Docker Setup On CPU:](#docker-setup-on-cpu)
+- ii) [Docker Compose Setup On CPU](#docker-compose-setup-on-cpu)
+- iii) [Script Setup On CPU](#script-setup-on-cpu)
+
+#### Docker Setup On CPU:
+This guide provides instructions on setting up the Document Forensics Project on a CPU using Docker.
+
+1. **Build the Docker Image**:
+
+    In the project directory, you'll find a file named `Dockerfile-cpu`. This file contains the instructions to build the Docker image for the CPU setup. Build the Docker image using the following command:
+
+    ```bash
+    sudo docker build -f "Dockerfile-cpu" -t docforensics_mauritius_inference_cpu:latest .
+    ```
+
+2. **Run the Docker Container**:
+    Now, run the Docker container from the image you just built. This will start the Document Forensics Project on your machine:
+
+    ```bash
+    sudo docker run --name docforensics_mauritius_inference_cpu -p 6003:6003 docforensics_mauritius_inference_cpu:latest
+    ```
+
+3. **Accessing the Project**:
+    Once the Docker container is up and running, you can access the Document Forensics Project through your web browser using the URL: `http://localhost:6003`
+
+4. **Stopping the Project**:
+    To stop the Document Forensics Project and the running container, use the following command:
+    
+    ```bash
+    sudo docker stop docforensics_mauritius_inference_cpu
+    ```
+
+#### Docker Compose Setup On CPU
+
+Docker Compose facilitates the management of multi-container Docker applications, making it a convenient method for setting up the Document Forensics Project on a CPU. Here's how to proceed:
+
+1. **Prepare the Docker Compose File**:
+    Ensure you have a `docker-compose-cpu.yml` file in the project directory. The file should have the content as provided above, tailored to the specifics of the Document Forensics Project and CPU setup.
+
+2. **Build the Docker Images**:
+    Navigate to the project directory where the `docker-compose-cpu.yml` file is located, and execute the following command to build the Docker images:
+    
+    ```bash
+    sudo docker compose -f "docker-compose-cpu.yml" build
+    ```
+
+3. **Start the Docker Containers**:
+    Now, start the Docker containers using the following command:
+    
+    ```bash
+    sudo docker compose -f "docker-compose-cpu.yml" up
+    ```
+
+4. **Accessing the Project**:
+    Once the Docker containers are up and running, access the Document Forensics Project through your web browser using the URL: `http://localhost:6003`
+
+5. **Stopping the Project**:
+    To stop the Document Forensics Project and the running containers, use the following command:
+    
+    ```bash
+    sudo docker compose -f "docker-compose-cpu.yml" down
+    ```
+
+#### Script Setup On CPU
+
+The `setup_cpu.sh` script is a straightforward method to set up the Document Forensics Project on a CPU. This script will create a new Conda environment and install all the necessary dependencies. Ensure you have Anaconda installed on your system before proceeding.
+
+1. **Run the Setup Script**:
+    Make the script executable and run it to set up the project:
+    
+    ```bash
+    chmod +x setup_cpu.sh
+    ./setup_cpu.sh
+    ```
+
+2. **Activate the Conda Environment**:
+    Once the script execution completes, activate the new Conda environment created by the script:
+    
+    ```bash
+    conda activate document-forensics-cpu
+    ```
+
+3. **Start the Project**:
+    Now, with the Conda environment activated, start the Document Forensics Project:
+    
+    ```bash
+    python main.py
+    ```
+
+4. **Accessing the Project**:
+    Once the project is up and running, access it through your web browser using the URL: `http://localhost:6003`
+
+5. **Stopping the Project**:
+    To stop the Document Forensics Project, simply terminate the running process in the terminal using `Ctrl + C`.
+
+6. **Deactivate the Conda Environment**:
+    After stopping the project, deactivate the Conda environment:
+    
+    ```bash
+    conda deactivate
+    ```
+
+These steps outline the process to set up the Document Forensics Project on a CPU using the `setup_cpu.sh` script. This method requires Anaconda to be installed on the system, as it relies on Conda environments to manage dependencies.
