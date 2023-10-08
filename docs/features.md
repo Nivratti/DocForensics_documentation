@@ -32,7 +32,7 @@ Image splicing (or Compositing) involves cutting a portion of one image and past
     - **Real-world Consequence**: This alteration might allow someone to use an expired ID as if it's still valid, potentially engaging in civic duties or accessing services under false pretenses.
 
 <figure markdown>
-  ![Splicing attack detection](assets/images/features/splicing-detection.png)
+  ![Splicing attack detection](assets/images/features/splicing-detection.png){ loading=lazy }
   <figcaption>Example: The individual's actual face has been substituted with a different face.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Copy-move forgery is a type of manipulation where a part/segment of the document
     - **Real-world Consequence**: The person could unlawfully get benefits or positions that require more extended driving experience or a specific age.
 
 <figure markdown>
-  ![Copy move detection](assets/images/features/copy-move-detection.png)
+  ![Copy move detection](assets/images/features/copy-move-detection.png){ loading=lazy }
   <figcaption>Example: The individual's face has been copied and pasted to a different location within the same document.
   </figcaption>
 </figure>
@@ -69,7 +69,7 @@ This involves removing certain elements from an image. In the context of digital
 - **Example 2**: Erasing a restriction or endorsement from a driving license and cloning adjacent background areas to cover the alteration.
 
 <figure markdown>
-  ![Erasing Detection](assets/images/features/erasing.png)
+  ![Erasing Detection](assets/images/features/erasing.png){ loading=lazy }
   <figcaption>Example: The ID number and signature have been erased from the document.
   </figcaption>
 </figure>
@@ -83,7 +83,7 @@ Covering up parts of an image or document with a solid or patterned overlay to h
 - **Example 2**: In a publicly released document, portions of the text are covered with redaction bars to prevent specific details from being disclosed.
 
 <figure markdown>
-  ![Masking Detection](assets/images/features/masking-text-redaction.png)
+  ![Masking Detection](assets/images/features/masking-text-redaction.png){ loading=lazy }
   <figcaption>Example: Text redaction has been applied to the image to conceal significant details.
   </figcaption>
 </figure>
@@ -96,7 +96,7 @@ Inpainting is a technique used to fill in missing or removed parts of an image i
 - **Example**: If someone were to erase a stamp (leaving a blank area), inpainting would involve filling that blank area with content (like background texture and color) that matches the surrounding region of the passport, making it appear as if the stamp was never there.
 
 <figure markdown>
-  ![Inpainting Detection](assets/images/features/inpainting.png)
+  ![Inpainting Detection](assets/images/features/inpainting.png){ loading=lazy }
   <figcaption>Example: Details have been erased and subsequently filled with background texture and color utilizing AI, making the alterations appear seamless and undetectable.
   </figcaption>
 </figure>
