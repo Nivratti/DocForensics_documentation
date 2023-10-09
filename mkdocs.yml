@@ -8,6 +8,7 @@ theme:
     - content.code.copy
     - content.code.annotate
     - navigation.footer
+    - navigation.instant
 
 nav:
     - Home: index.md
