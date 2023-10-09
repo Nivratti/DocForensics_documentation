@@ -10,6 +10,7 @@ theme:
     - navigation.footer
     - navigation.instant
     - navigation.instant.progress
+    - search.highlight
 
 nav:
     - Home: index.md
@@ -36,6 +37,7 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  - search
 
 extra:
   generator: false
