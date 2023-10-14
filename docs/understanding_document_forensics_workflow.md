@@ -21,3 +21,14 @@ The solution employs a trained model to identify the forgery regions within an i
     - **Tampered**: Classified if the percentage of white pixels surpasses the upper threshold, i.e., if white pixels percentage is more than 0.57%.
 
 > Note: The thresholds for "Suspicious" and "Tampered" classifications can be adjusted as needed. These thresholds have been established based on the model's performance on Mauritius ID and Pancard images.
+
+
+### Example images and predicted forgery mask:
+
+|  #  |    Image  | Predicted Mask | Label |
+|:---:|:---------:|:--------------:|:-----:|
+| 1| ![Image1](assets/images/samples_with_predicted_mask/original/01-original.jpeg){ width="300" } | ![PredictedMask1](assets/images/samples_with_predicted_mask/original/01-original-predicted-mask.png){ width="300" } | Original Image |
+| 2| ![Image2](assets/images/samples_with_predicted_mask/original/02-original.jpg) | ![PredictedMask2](assets/images/samples_with_predicted_mask/original/02-original-predicted-mask.png) | Original Image |
+| 3| ![Image3](assets/images/samples_with_predicted_mask/tampered/tampered-01.jpeg) | ![PredictedMask3](assets/images/samples_with_predicted_mask/tampered/tampered-01-predicted-mask.png) | Tampered Image (Masking - text redaction) |
+| 4| ![Image4](assets/images/samples_with_predicted_mask/tampered/tampered-02.jpeg) | ![PredictedMask4](assets/images/samples_with_predicted_mask/tampered/tampered-02-predicted-mask.png) | Tampered Image (Copy-move)|
+| 5| ![Image5](assets/images/samples_with_predicted_mask/tampered/tampered-03-slicing.png) | ![PredictedMask2](assets/images/samples_with_predicted_mask/tampered/tampered-03-slicing-predicted-mask.png) | Tampered Image (Splicing - face region changed) |
