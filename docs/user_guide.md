@@ -31,7 +31,7 @@ The Gradio UI provides a user-friendly interface to upload and analyze digital d
 The API interface provides a programmatic way to submit documents for analysis and retrieve the results.
 
 1. **API Endpoint**:
-    - The API endpoint for document submission is `http://localhost:6003/analyze`.
+    - The API endpoint for document submission is `http://localhost:6003/api/predict`.
 
 2. **Submitting Documents for Analysis**:
     - Make a POST request to the API endpoint with the document file attached in the request body.
