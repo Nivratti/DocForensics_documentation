@@ -11,8 +11,3 @@ DocForensics is a cutting-edge solution designed to localize and identify variou
 - **Erasing Detection:** Uncover erasing attempts to remove original content from documents.
 - **Masking Detection:** Identify areas within an image or document where a solid or patterned overlay has been applied to conceal underlying content, such as in text redaction or image obscuration.
 - **Inpainting Detection:** Identify and localize instances where missing or altered areas within a document have been filled in with generated content to create a seamless appearance.
-
-
-## Getting Started
-
-Ready to explore the Document Forensic Solution? Head over to the [Getting Started](getting_started.md) section for installation instructions and initial configuration guidelines.
