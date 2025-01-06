@@ -15,7 +15,7 @@ theme:
 
 nav:
     - Home: index.md
-    - Getting Started: getting_started.md
+    - Installation: installation.md
     - User Guide: user_guide.md
     - Input Image Requirements: input_image_requirements.md
     - Features: features.md

@@ -1,4 +1,4 @@
-# Getting Started with Document Forensics Project
+# Installation process of Document Forensics Project
 
 This page will guide you through the initial setup and installation process to get the Document Forensics Project up and running on your machine.
 
@@ -21,6 +21,7 @@ Before proceeding with the installation, ensure you have the following prerequis
     - Docker: Follow the [official Docker installation guide](https://docs.docker.com/get-docker/) to install Docker on your machine.
     - Docker Compose: Follow the [official Docker Compose installation guide](https://docs.docker.com/compose/install/) to install Docker Compose on your machine.
     - GPU driver: If you are setting up project on nvidia gpu, then driver version >= 525 will be required.
+    - Nvidia container toolkit: [installation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
 - **Others:**
      - Stable internet connection for cloning the repository and downloading dependencies.
@@ -43,11 +44,10 @@ This guide provides detailed instructions on how to set up the Document Forensic
 
 ### GPU Setup (Recommended):
 
-There are three distinct methods available for setting up the project on a GPU: Docker, Docker Compose, and using the `setup.sh` script. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
+There are two distinct methods available for setting up the project on a GPU: Docker and Docker Compose. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
 
 - i) [Docker Setup:](#docker-setup)
 - ii) [Docker Compose Setup](#docker-compose-setup)
-- iii) [Script Setup](#script-setup)
   
 #### Docker Setup:
 This guide provides instructions on setting up the Document Forensics Project on a GPU using Docker.
@@ -107,54 +107,12 @@ Docker Compose facilitates the management of multi-container Docker applications
 
 These steps outline the procedure for setting up and managing the Document Forensics Project on a GPU using Docker Compose.
 
-#### Script Setup
-
-The `setup.sh` script is a straightforward method to set up the Document Forensics Project on a GPU. This script will create a new Conda environment and install all the necessary dependencies. Ensure you have Anaconda installed on your system before proceeding.
-
-1. **Run the Setup Script**:
-   Make the script executable and run it to set up the project:
-   ```bash
-   chmod +x setup.sh
-   ./setup.sh
-   ```
-
-2. **Activate the Conda Environment**:
-   Once the script execution completes, activate the new Conda environment created by the script:
-   ```bash
-   conda activate document-forensics-gpu
-   ```
-
-3. **Start the Project**:
-   Now, with the Conda environment activated, start the Document Forensics Project:
-   ```bash
-   python main.py
-   ```
-
-4. **Accessing the Project**:
-   Once the project is up and running, access it through your web browser using the URL: `http://localhost:6003`
-
-5. **Stopping the Project**:
-   To stop the Document Forensics Project, simply terminate the running process in the terminal using `Ctrl + C`.
-
-6. **Deactivate the Conda Environment**:
-   After stopping the project, deactivate the Conda environment:
-   ```bash
-   conda deactivate
-   ```
-
-These steps outline the process to set up the Document Forensics Project on a GPU using the `setup.sh` script. This method requires Anaconda to be installed on the system, as it relies on Conda environments to manage dependencies.
-```
-
-In this section, a step-by-step procedure is provided to set up the Document Forensics Project on a GPU using the `setup.sh` script. It includes making the script executable, running it, activating the newly created Conda environment, starting the project, and how to access, stop, and deactivate the environment post usage.
-
-
 ### CPU Setup:
 
-There are three distinct methods available for setting up the project on a CPU: Docker, Docker Compose, and using the `setup_cpu.sh` script. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
+There are two methods available for setting up the project on a CPU: Docker and Docker Compose. You can opt for any of these methods depending on your preferences or the specifics of your environment setup.
 
 - i) [Docker Setup On CPU:](#docker-setup-on-cpu)
 - ii) [Docker Compose Setup On CPU](#docker-compose-setup-on-cpu)
-- iii) [Script Setup On CPU](#script-setup-on-cpu)
 
 #### Docker Setup On CPU:
 This guide provides instructions on setting up the Document Forensics Project on a CPU using Docker.
@@ -214,48 +172,6 @@ Docker Compose facilitates the management of multi-container Docker applications
     ```bash
     sudo docker compose -f "docker-compose-cpu.yml" down
     ```
-
-#### Script Setup On CPU
-
-The `setup_cpu.sh` script is a straightforward method to set up the Document Forensics Project on a CPU. This script will create a new Conda environment and install all the necessary dependencies. Ensure you have Anaconda installed on your system before proceeding.
-
-1. **Run the Setup Script**:
-    Make the script executable and run it to set up the project:
-    
-    ```bash
-    chmod +x setup_cpu.sh
-    ./setup_cpu.sh
-    ```
-
-2. **Activate the Conda Environment**:
-    Once the script execution completes, activate the new Conda environment created by the script:
-    
-    ```bash
-    conda activate document-forensics-cpu
-    ```
-
-3. **Start the Project**:
-    Now, with the Conda environment activated, start the Document Forensics Project:
-    
-    ```bash
-    python main.py
-    ```
-
-4. **Accessing the Project**:
-    Once the project is up and running, access it through your web browser using the URL: `http://localhost:6003`
-
-5. **Stopping the Project**:
-    To stop the Document Forensics Project, simply terminate the running process in the terminal using `Ctrl + C`.
-
-6. **Deactivate the Conda Environment**:
-    After stopping the project, deactivate the Conda environment:
-    
-    ```bash
-    conda deactivate
-    ```
-
-These steps outline the process to set up the Document Forensics Project on a CPU using the `setup_cpu.sh` script. This method requires Anaconda to be installed on the system, as it relies on Conda environments to manage dependencies.
-
 
 ## Initial Configuration:
 
