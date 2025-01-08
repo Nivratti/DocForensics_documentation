@@ -389,6 +389,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps:
@@ -748,6 +757,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps:
@@ -1041,6 +1059,12 @@
 </ol>
 <h3 id="dataset-requirements">Dataset Requirements:</h3>
 <p>To enhance support for new card types, ensure you collect authentic <strong>at least 30 unique, high-quality images</strong> of the new card type.</p>
+<h3 id="tutorials">Tutorials</h3>
+<p>Watch the video tutorial on fine-tuning the document forensic model:</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1ZeHLxIoqGcjD5GMREQUL9em7FBiDgSY4/view?usp=drive_link">Google Drive Link</a>  </li>
+<li><a href="https://github.com/Nivratti/doc_forensics_train/releases/download/v4.0/Finetuning-Document-forensic-model.mp4">GitHub Release Link</a></li>
+</ul>
 <h3 id="steps">Steps:</h3>
 <h4 id="step-1-crop-id-cards">Step 1: Crop ID cards</h4>
 <p>Crop ID cards to isolate the ID card region from the background, retaining only the ID card region. The current card segmentation model supports PAN cards and Mauritius ID cards. For other card types, you can either search for a pre-trained model online or manually crop the ID card region.</p>
@@ -1051,7 +1075,9 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./resources/models/card_segmentation/v8.0.1/best.onnx
 </span></code></pre></div></p>
 <h6 id="general-syntax">General Syntax</h6>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>inference_card_segmentation.py<span class="w"> </span>--input_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_input_directory&gt;&quot;</span><span class="w"> </span>--output_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_output_directory&gt;&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>inference_card_segmentation.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span>--input_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_input_directory&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span>--output_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_output_directory&gt;&quot;</span>
 </span></code></pre></div>
 <ul>
 <li><strong><code>--input_dir</code></strong>: Path to the folder containing input files (e.g., raw ID card images).</li>
@@ -1060,7 +1086,9 @@
 <h6 id="example">Example</h6>
 <ol>
 <li>Processing Mauritius ID Cards
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>inference_card_segmentation.py<span class="w"> </span>--input_dir<span class="w"> </span><span class="s2">&quot;datasets/raw/Mauritius-id-nic-v1&quot;</span><span class="w"> </span>--output_dir<span class="w"> </span><span class="s2">&quot;datasets/processed/Mauritius-id-card/card-det-res&quot;</span>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>inference_card_segmentation.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span>--input_dir<span class="w"> </span><span class="s2">&quot;datasets/raw/Mauritius-id-nic-v1&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">   </span>--output_dir<span class="w"> </span><span class="s2">&quot;datasets/processed/Mauritius-id-card/card-det-res&quot;</span>
 </span></code></pre></div></li>
 </ol>
 <h4 id="step-2-orientation-correction">Step 2: Orientation correction</h4>
@@ -1085,7 +1113,9 @@
 <h5 id="command-line-usage_1">Command Line Usage</h5>
 <p>Use the following syntax and examples to run the script from the command line.</p>
 <h6 id="general-syntax_1">General Syntax</h6>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span>--source_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_source_directory&gt;&quot;</span><span class="w"> </span>--out_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_output_directory&gt;&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">   </span>--source_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_source_directory&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span>--out_dir<span class="w"> </span><span class="s2">&quot;&lt;path_to_output_directory&gt;&quot;</span>
 </span></code></pre></div>
 <ul>
 <li><strong><code>--source_dir</code></strong>: Path to the source directory containing the cropped and split datasets (e.g., training or validation sets).</li>
@@ -1095,12 +1125,16 @@
 <ol>
 <li>
 <p>For generating Training Dataset
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span>--source_dir<span class="w"> </span><span class="s2">&quot;./datasets/processed/Mauritius-id-card/split_cropped/train/&quot;</span><span class="w"> </span>--out_dir<span class="w"> </span><span class="s2">&quot;./datasets/data_gen/Mauritius-id-card/train&quot;</span>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">   </span>--source_dir<span class="w"> </span><span class="s2">&quot;./datasets/processed/Mauritius-id-card/split_cropped/train/&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span>--out_dir<span class="w"> </span><span class="s2">&quot;./datasets/data_gen/Mauritius-id-card/train&quot;</span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p>For generating Validation Dataset
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span>--source_dir<span class="w"> </span><span class="s2">&quot;./datasets/processed/Mauritius-id-card/split_cropped/val/&quot;</span><span class="w"> </span>--out_dir<span class="w"> </span><span class="s2">&quot;./datasets/forensic_data_gen/Mauritius-id-card/val&quot;</span>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>data_gen_wrapper.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">   </span>--source_dir<span class="w"> </span><span class="s2">&quot;./datasets/processed/Mauritius-id-card/split_cropped/val/&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">   </span>--out_dir<span class="w"> </span><span class="s2">&quot;./datasets/forensic_data_gen/Mauritius-id-card/val&quot;</span>
 </span></code></pre></div></p>
 </li>
 </ol>
