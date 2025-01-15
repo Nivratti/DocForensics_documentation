@@ -127,15 +127,17 @@ python main.py \
 - **`--data_path`**: Path to the folder containing the training dataset (e.g., images and masks).
 - **`--test_data_path`**: Path to the folder containing the testing dataset for evaluation during fine-tuning.
 - **`--output_dir`**: (Optional) Path to the directory where the fine-tuned model and logs will be saved.
-- **`--weights_path`**: (Optional) Path to the pre-trained weights file. The default value is `./ckpt/v7.0/best_model.pth`. You can change this path based on your requirements.
+- **`--weights_path`**: (Optional) Path to the pre-trained weights file. The default value is `./ckpt/v8.0/best_model.pth`. You can change this path based on your requirements.
+
+To download the `v8.0/best_model.pth` file use the following link: [v8.0/best_model.pth](https://github.com/Nivratti/DocForensics_Mauritius_Inference/releases/download/v8.0/best_model.pth)
 
 ##### Example Command
 ```bash
 python main.py \
     --data_path "./datasets/data_gen/Mauritius-id-card/train/" \
     --test_data_path "./datasets/data_gen/Mauritius-id-card/val/" \
-    --output_dir "./output/training/v8.2" \
-    --weights_path "./ckpt/v8.1/best_model.pth"
+    --output_dir "./output/training/v8.1" \
+    --weights_path "./ckpt/v8.0/best_model.pth"
 ```
 
 ##### Output
