@@ -1153,14 +1153,15 @@
 <li><strong><code>--data_path</code></strong>: Path to the folder containing the training dataset (e.g., images and masks).</li>
 <li><strong><code>--test_data_path</code></strong>: Path to the folder containing the testing dataset for evaluation during fine-tuning.</li>
 <li><strong><code>--output_dir</code></strong>: (Optional) Path to the directory where the fine-tuned model and logs will be saved.</li>
-<li><strong><code>--weights_path</code></strong>: (Optional) Path to the pre-trained weights file. The default value is <code>./ckpt/v7.0/best_model.pth</code>. You can change this path based on your requirements.</li>
+<li><strong><code>--weights_path</code></strong>: (Optional) Path to the pre-trained weights file. The default value is <code>./ckpt/v8.0/best_model.pth</code>. You can change this path based on your requirements.</li>
 </ul>
+<p>To download the <code>v8.0/best_model.pth</code> file use the following link: <a href="https://github.com/Nivratti/DocForensics_Mauritius_Inference/releases/download/v8.0/best_model.pth">v8.0/best_model.pth</a></p>
 <h5 id="example-command">Example Command</h5>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>main.py<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>--data_path<span class="w"> </span><span class="s2">&quot;./datasets/data_gen/Mauritius-id-card/train/&quot;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>--test_data_path<span class="w"> </span><span class="s2">&quot;./datasets/data_gen/Mauritius-id-card/val/&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>--output_dir<span class="w"> </span><span class="s2">&quot;./output/training/v8.2&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>--weights_path<span class="w"> </span><span class="s2">&quot;./ckpt/v8.1/best_model.pth&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>--output_dir<span class="w"> </span><span class="s2">&quot;./output/training/v8.1&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>--weights_path<span class="w"> </span><span class="s2">&quot;./ckpt/v8.0/best_model.pth&quot;</span>
 </span></code></pre></div>
 <h5 id="output">Output</h5>
 <ul>
