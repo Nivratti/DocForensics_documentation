@@ -12,6 +12,13 @@ You can fine-tune the forensics model for the following purposes:
 
 To enhance support for new card types, ensure you collect authentic **at least 30 unique, high-quality images** of the new card type.
 
+### Tutorials
+
+Watch the video tutorial on fine-tuning the document forensic model:
+
+- [Google Drive Link](https://drive.google.com/file/d/1ZeHLxIoqGcjD5GMREQUL9em7FBiDgSY4/view?usp=drive_link)  
+- [GitHub Release Link](https://github.com/Nivratti/doc_forensics_train/releases/download/v4.0/Finetuning-Document-forensic-model.mp4)
+
 ### Steps:
 
 #### Step 1: Crop ID cards
@@ -30,7 +37,9 @@ After downloading, extract the contents into the `./resources/models` folder. On
 
 ###### General Syntax
 ```bash
-python inference_card_segmentation.py --input_dir "<path_to_input_directory>" --output_dir "<path_to_output_directory>"
+python inference_card_segmentation.py \
+   --input_dir "<path_to_input_directory>" \
+   --output_dir "<path_to_output_directory>"
 ```
 
 - **`--input_dir`**: Path to the folder containing input files (e.g., raw ID card images).
@@ -40,7 +49,9 @@ python inference_card_segmentation.py --input_dir "<path_to_input_directory>" --
 
 1. Processing Mauritius ID Cards
    ```bash
-   python inference_card_segmentation.py --input_dir "datasets/raw/Mauritius-id-nic-v1" --output_dir "datasets/processed/Mauritius-id-card/card-det-res"
+   python inference_card_segmentation.py \
+      --input_dir "datasets/raw/Mauritius-id-nic-v1" \
+      --output_dir "datasets/processed/Mauritius-id-card/card-det-res"
    ```
 
 #### Step 2: Orientation correction
@@ -73,7 +84,9 @@ Use the following syntax and examples to run the script from the command line.
 
 ###### General Syntax
 ```bash
-python data_gen_wrapper.py --source_dir "<path_to_source_directory>" --out_dir "<path_to_output_directory>"
+python data_gen_wrapper.py 
+   --source_dir "<path_to_source_directory>" \
+   --out_dir "<path_to_output_directory>"
 ```
 
 - **`--source_dir`**: Path to the source directory containing the cropped and split datasets (e.g., training or validation sets).
@@ -82,12 +95,16 @@ python data_gen_wrapper.py --source_dir "<path_to_source_directory>" --out_dir "
 ###### Example Commands
 1. For generating Training Dataset
    ```bash
-   python data_gen_wrapper.py --source_dir "./datasets/processed/Mauritius-id-card/split_cropped/train/" --out_dir "./datasets/data_gen/Mauritius-id-card/train"
+   python data_gen_wrapper.py \
+      --source_dir "./datasets/processed/Mauritius-id-card/split_cropped/train/" \
+      --out_dir "./datasets/data_gen/Mauritius-id-card/train"
    ```
 
 2. For generating Validation Dataset
    ```bash
-   python data_gen_wrapper.py --source_dir "./datasets/processed/Mauritius-id-card/split_cropped/val/" --out_dir "./datasets/forensic_data_gen/Mauritius-id-card/val"
+   python data_gen_wrapper.py \
+      --source_dir "./datasets/processed/Mauritius-id-card/split_cropped/val/" \
+      --out_dir "./datasets/forensic_data_gen/Mauritius-id-card/val"
    ```
 
 By running these commands, tampered images and their corresponding masks will be generated and stored in the specified output directories.
